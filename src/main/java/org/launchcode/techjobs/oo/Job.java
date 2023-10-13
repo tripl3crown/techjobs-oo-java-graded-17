@@ -98,15 +98,15 @@ public class Job {
 
     @Override
     public String toString() {
-        if (this.getName() == "") {
+        if (Objects.equals(this.getName(), "")) {
             this.name = "Data not available"; }
-        if (this.getEmployer().getValue() == "") {
+        if (Objects.equals(this.getEmployer().getValue(), "")) {
             this.setEmployer(new Employer("Data not available")); }
-        if (this.getLocation().getValue() == "") {
+        if (Objects.equals(this.getLocation().getValue(), "")) {
             this.setLocation(new Location("Data not available")); }
-        if (this.getPositionType().getValue() == "") {
+        if (Objects.equals(this.getPositionType().getValue(), "")) {
             this.setPositionType(new PositionType("Data not available")); }
-        if (this.getCoreCompetency().getValue() == "") {
+        if (Objects.equals(this.getCoreCompetency().getValue(), "")) {
             this.setCoreCompetency(new CoreCompetency("Data not available")); }
         return "\nID: " + this.getId() + "\nName: " + this.getName() + "\nEmployer: " + this.getEmployer() + "\nLocation: " + this.getLocation() + "\nPosition Type: " + this.getPositionType() + "\nCore Competency: " + this.getCoreCompetency() + "\n";
     }
